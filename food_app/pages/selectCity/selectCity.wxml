@@ -1,0 +1,18 @@
+<!-- 城市选择 -->
+
+<view class="title">当前所在城市</view>
+<button class="currentCity" size="mini"
+bindtap="getLoc">定位</button>
+
+<view class="title">热门城市</view>
+ 
+<view class="hot-city">
+  <button size="mini" wx:for="{{citylist}}"  wx:key="index"
+  bindtap="changeCity" data-city="{{item}}">{{item}}</button>
+
+</view>
+
+<view>
+<!-- 地图组件 -->
+  <map longitude="{{longitude}}" latitude="{{latitude}}" wx:if="{{mapShow}}" scale="{{14}}"></map>
+</view>

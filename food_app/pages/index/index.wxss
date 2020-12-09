@@ -1,0 +1,105 @@
+/* pages/index/index.wxss */
+
+.banner {
+  position: relative;
+}
+.banner swiper swiper-item{
+  height: 167rpx;
+  position: relative;
+}
+
+.banner swiper swiper-item image {
+  width: 100%;
+  height: 334rpx;
+}
+
+.banner swiper swiper-item view {
+  width: 100%;
+  height: 46rpx;
+  line-height: 46rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.5);
+  text-align: center;
+  color: white;
+  font-size: 24rpx;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.banner .corner {
+  position: absolute;
+  right: 10rpx;
+  bottom: 5rpx;
+  font-size: 24rpx;
+  color: white;
+}
+
+/* 每日样式 */
+.one_day {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 35rpx;
+  padding: 0 20rpx;
+}
+
+.one_day .item image {
+  width: 306rpx;
+  height: 185rpx;
+}
+.one_day .item .text {
+  text-align: center;
+  color: #676565;
+  font-size: 26rpx;
+}
+
+/* 新闻列表 */
+.newslist .item{
+  height: 242rpx;
+  border-bottom: 2rpx solid #eeeeee;
+  margin: 0 20rpx;
+  position: relative;
+}
+
+.newslist .item .item_wrapper image {
+  width: 210rpx;
+  height: 140rpx;
+  float: left;
+}
+.newslist .item .item_wrapper .info {
+  float: left;
+  margin-left: 22rpx;
+  font-size: 26rpx;
+  width: 470rpx;
+  color: #818181;
+  /* 下面三行省略样式 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.newslist .item .title {
+  color: #1a1a1a;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.newslist .item .readNum {
+  position: absolute;
+  right: 0;
+  bottom: 18rpx;
+  font-size: 24rpx;
+  color: #4d4d4d;
+}
+.newslist .item .readNum text {
+  color: red;
+}

@@ -1,0 +1,70 @@
+<!--pages/index/index.wxml-->
+
+<!-- 轮播图 -->
+<view class="banner">
+  <swiper autoplay="true" interval="3000" circular="true" bindchange="swiperChange">
+    <swiper-item wx:for="{{bannerList}}"
+    wx:key="index">
+      <navigator url="{{item.url}}">
+         <image src="{{item.image}}"></image>
+         <view>{{item.title}}</view>
+      </navigator>
+    </swiper-item>
+   
+  </swiper>
+  <!-- 固定的数字变化 -->
+  <view class="corner">{{currentIdx+1}}/{{bannerList.length}}</view>
+</view>
+
+<!-- 每日区域 -->
+<view class="one_day">
+  <view class="item">
+    <image src="../../images/info_left.jpg"></image>
+    <view class="text">每日一测</view>
+  </view>
+  <view class="item">
+    <image src="../../images/info_right.jpg"></image>
+    <view class="text">每日食谱</view>
+  </view>
+</view>
+
+<!-- 新闻列表 -->
+<view class="newslist">
+
+<!-- 
+ 点击新闻 进入到详情页 要发生跳转 并且需要传递过去 数据 一般是新闻的id 涉及到数据传递
+ 两种方式进行跳转
+ 方式1 ： 可以使用navigator 组件 进行url跳转
+   传递数据过去  url="../details/details?itemid={{item.id}}"
+   详情页如何接收呢  在onload函数中 默认有一个参数options (这是一个对象 直接可以接收到传递过来的数据)
+
+ 方式2: 可以通过触发事件 调用跳转api  进行跳转 
+   传递数据过去 : bindtap="indexDetailFn" data-id="{{item.id}}
+   wx.navigateTo({
+      url: '../details/details?itemid=' + e.currentTarget.dataset.id,
+    })
+
+  详情页如何接收呢  在onload函数中 默认有一个参数options (这是一个对象 直接可以接收到传递过来的数据)
+
+
+
+ 
+
+
+ -->
+
+  <view class="item" wx:for="{{newslist}}" wx:key="index" bindtap="indexDetailFn" data-id="{{item.id}}">
+    <!-- <navigator url="../details/details?itemid={{item.id}}"> -->
+         <view class="title">{{item.title}}</view>
+          <view class="item_wrapper">
+            <image src="{{item.image}}"></image>
+            <view class="info">{{item.desc}}</view>
+          </view>
+          <view class="readNum">
+            <text>{{item.readNum}}</text>次阅读
+          </view>
+    <!-- </navigator> -->
+  </view>
+
+</view>
+

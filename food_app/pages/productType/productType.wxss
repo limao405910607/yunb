@@ -1,0 +1,7 @@
+/* pages/productType/productType.wxss */
+
+@import "../../templates/foodsTemps/foodsTemps.wxss";
+
+page {
+  background-color: #f1f1f1;
+}

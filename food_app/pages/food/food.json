@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "食疗坊",
+  "onReachBottomDistance": 100,
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#ccc",
+  "backgroundTextStyle": "light"
+
+}

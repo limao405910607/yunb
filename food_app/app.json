@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/food/food",
+    "pages/cart/cart",
+    "pages/about/about",
+    "pages/details/details",
+    "pages/selectCity/selectCity",
+    "pages/search/search",
+    "pages/productType/productType",
+    "pages/productDetail/productDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#49be93",
+    "navigationBarTitleText": "安心食疗",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab1.png",
+        "selectedIconPath": "images/tab5.png"
+      },
+      {
+        "pagePath": "pages/food/food",
+        "text": "食疗坊",
+        "iconPath": "images/tab2.png",
+        "selectedIconPath": "images/tab6.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/tab9.png",
+        "selectedIconPath": "images/tab10.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我的",
+        "iconPath": "images/tab4.png",
+        "selectedIconPath": "images/tab8.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

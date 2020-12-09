@@ -1,0 +1,23 @@
+
+<view class="header">
+  <image src="../../images/banner.jpg"></image>
+</view>
+
+<view class="title">{{info.name}}</view>
+
+<view>暂无评论</view>
+<view>商品详情</view>
+<image class="img" src="{{info.pic}}"></image>
+<view class="desc">
+  {{info.description}}{{info.details}}
+</view>
+
+<!-- 底部加入购物车的布局 -->
+<view class="btm_cart">
+   <view>
+    <image src="../../images/tab9.png"
+    bindtap="gotoCartFn"></image>
+   </view>
+   <view class="add" bindtap="addCartFn">加入购物车</view>
+   <view class="buy">直接购买</view>
+</view>

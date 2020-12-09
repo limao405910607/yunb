@@ -1,0 +1,18 @@
+<!-- 搜索页面 -->
+<view class="header">
+ <input focus="{{true}}" placeholder="请您输入要搜索的产品名称" bindinput="inputFn"></input>
+</view>
+
+<!-- 导入模版 -->
+<import src="../../templates/foodsTemps/foodsTemps.wxml" />
+<!-- 使用模板 -->
+
+<view class="productList">
+
+<block wx:for="{{productLists}}" wx:key="index">
+<template is="productTemp" data="{{...item}}"></template>
+</block>
+
+
+</view>
+

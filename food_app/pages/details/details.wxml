@@ -1,0 +1,8 @@
+<!--pages/details/details.wxml-->
+<view class="title">{{info.title}}</view>
+
+<!-- 图片 -->
+<image src="{{info.image}}"></image>
+
+<!-- 文章 -->
+<view class="article">{{info.detail}}</view>

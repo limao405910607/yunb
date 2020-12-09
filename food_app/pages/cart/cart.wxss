@@ -1,0 +1,152 @@
+/* pages/cart/cart.wxss */
+
+page {
+  background-color:#f1f1f1;
+}
+
+.cart_list .cart_item {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  height: 190rpx;
+  width: 860rpx;
+  transform: translateX(0rpx);
+  transition: 0.3s linear;
+}
+.cart_list .moveClass {
+  transform: translateX(-150rpx);
+}
+
+.cart_list .cart_item image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.cart_list .cart_item>view {
+  float: left;
+}
+
+.cart_list .cart_item>view icon {
+  position: relative;
+  top: 70rpx;
+  margin-right: 12rpx;
+}
+
+.cart_list .cart_item .img {
+  margin-right: 20rpx;
+}
+
+.cart_list .cart_item .info {
+  position: relative;
+  height: 180rpx;
+}
+.cart_list .cart_item .info .title {
+  color: #000;
+  font-size: 30rpx;
+  line-height: 56rpx;
+  height: 56rpx;
+  width: 450rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cart_list .cart_item .info .desc{
+  color: #676767;
+  font-size: 26rpx;
+  width: 445rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.cart_list .cart_item .info .price {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 22rpx;
+  color: red;
+}
+
+.calculator {
+  position: absolute;
+  left: 180rpx;
+  bottom: 0;
+}
+.calculator>text {
+  display: inline-block;
+  text-align: center;
+}
+.calculator .reduce {
+  width: 38rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  border: 2rpx solid #999999;
+}
+.calculator .add {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color:#000;
+  color: white;
+}
+.calculator .num {
+  margin: 0 30rpx;
+}
+
+.cart_list .cart_item  .remove {
+  width: 150rpx;
+  height: 230rpx;
+  line-height: 230rpx;
+  background-color: red;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -20rpx;
+  left: 22rpx;
+}
+
+/* 底部统计区域的样式 */
+
+.btm_calc {
+  background-color:#fff;
+  height: 84rpx;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  text-align: center;
+  line-height: 84rpx;
+}
+
+.btm_calc .allSelected {
+  width: 260rpx;
+}
+.btm_calc .allSelected icon {
+  position: relative;
+  top: 12rpx;
+}
+.btm_calc .total {
+  background-color: #999999;
+  width: 234rpx;
+  color: white;
+ 
+}
+.btm_calc .btm_count  {
+  flex:1;
+}
+.btm_calc .btm_count text:nth-child(2){
+  color: #49be93;
+  font-size: 26rpx;
+  margin: 0 10rpx;
+}
+.btm_calc .btm_count text:nth-child(3) {
+  color: #999;
+  font-size: 22rpx;
+}
+
+.btm_calc .checkoutClass {
+  background-color: #49be93;
+}

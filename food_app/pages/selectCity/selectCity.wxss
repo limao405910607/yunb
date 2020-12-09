@@ -1,0 +1,17 @@
+/* pages/selectCity/selectCity.wxss */
+
+.title {
+  margin: 20rpx 15rpx;
+  font-size: 28rpx;
+}
+
+.currentCity {
+  color: green;
+  background-color: #f1f1f1;
+  margin-left: 20rpx;
+}
+.hot-city button {
+  font-weight: normal;
+  font-size: 24rpx;
+  margin:  0 10rpx;
+}

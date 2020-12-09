@@ -1,0 +1,13 @@
+<template name="productTemp">
+ <view class="item" bindtap="productDetailFn" data-id="{{id}}">
+    <image src="{{pic}}"></image>
+    <view class="info">
+       <view class="title">{{name}}</view>
+       <view class="desc">{{description}}</view>
+       <view class="info_btm">
+        <text class="price">¥{{price}}</text>
+        <text class="num">{{buynum}}人付款</text>
+       </view>
+      </view>
+  </view>
+</template>

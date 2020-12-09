@@ -1,0 +1,64 @@
+/* pages/food/food.wxss */
+
+page {
+  background-color: #f1f1f1;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  height: 80rpx;
+}
+.header .location {
+  font-size: 30rpx;
+  color: #000;
+  width: 110rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.header .search {
+  background-color: #f1f1f1;
+  font-size: 25rpx;
+  text-indent: 10rpx;
+  color: #acacac;
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 13rpx;
+  margin-top: 9rpx;
+  margin-right: 10rpx;
+}
+
+
+/* 分类区域样式 */
+.classify {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 25rpx;
+  background-color: #fff;
+}
+.classify .item  {
+  width: 25%;
+  text-align: center;
+  margin-bottom: 25rpx;
+}
+.classify .item image {
+  width: 74rpx;
+  height: 74rpx;
+}
+.classify .item view {
+  font-size: 24rpx;
+  color: #666666;
+}
+
+/* 商品列表区域 */
+/* 导入样式 */
+@import '../../templates/foodsTemps/foodsTemps.wxss';
+
+.more {
+  font-size: 20rpx;
+  font-weight: normal;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

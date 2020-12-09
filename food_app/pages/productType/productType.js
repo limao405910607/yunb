@@ -1,0 +1,88 @@
+const { default: http } = require("../../utils/http")
+
+// pages/productType/productType.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    typelists: []
+  },
+  productDetailFn(e){
+    console.log(e);
+    // 跳转到产品详情页
+    wx.navigateTo({
+      url: '../productDetail/productDetail?id=' + e.currentTarget.dataset.id,
+    })
+   },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    console.log(options.typeid)
+    // 根据分类id 去请求该分类下的所有的产品数据
+
+    http({
+       url: '/api/type',
+       data:{
+         type: Number(options.typeid)-1
+       },
+       successFn: res=>{
+         console.log(res);
+         this.setData({
+           typelists: res.list
+         })
+       }
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

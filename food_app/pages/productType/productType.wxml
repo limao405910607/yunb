@@ -1,0 +1,9 @@
+<!-- 这里是产品分类的 列表  -->
+<!-- 导入模板 -->
+<import src="../../templates/foodsTemps/foodsTemps.wxml" />
+<!-- 使用模板 -->
+<view class="productList">
+   <block wx:for="{{typelists}}" wx:key="index">
+    <template is="productTemp" data="{{...item}}"></template>
+   </block>
+</view>

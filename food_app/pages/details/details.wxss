@@ -1,0 +1,17 @@
+/* pages/details/details.wxss */
+
+.title {
+  margin: 20rpx;
+}
+
+image {
+  width: 100%;
+}
+
+.article {
+  margin: 20rpx;
+  text-indent: 2em;
+  color: #666;
+  font-size: 28rpx;
+  line-height: 45rpx;
+}
